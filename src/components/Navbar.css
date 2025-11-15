@@ -3,21 +3,29 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background: rgba(28, 28, 28, 0.7);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 28, 28, 0.8),
+    rgba(28, 40, 50, 0.7)
+  );
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
   width: 90%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
 }
 
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #f0f0f0;
+  background: linear-gradient(135deg, #8a2be2, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .navbar-links {
@@ -33,8 +41,17 @@
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 0.25rem;
 }
 
 .navbar-links a:hover {
-  color: #8A2BE2; /* Violet accent */
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.navbar-links a.active {
+  color: #00d4ff;
+  border-bottom: 2px solid #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
